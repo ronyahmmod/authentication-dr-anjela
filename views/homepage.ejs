@@ -1,0 +1,54 @@
+<%- include('header') %> 
+
+<div class="jumbotron bg-light">
+    <h1 class="display-1 text-center text-danger"><i class="fas fa-key"></i></h1>
+    <h4 class="display-4 text-center mb-5">Authentication Reqired</h4>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 mt-3">
+                <div class="card text-center shadow-sm">
+                    <h4 class="display-4">Login</h4>
+                    <p class="lead">I already have an account</p>
+                    <div class="card-body">
+                        <form name="login" id="login" method="post" action="/signin">
+                            <div class="form-group text-left">
+                                <label for="email">Email address</label>
+                                <input class="form-control" type="email" name="login_email" id="login_email" placeholder="Enter valid email address" required />
+                            </div>
+                            <div class="form-group text-left">
+                                <label for="password">Password</label>
+                                <input class="form-control" current-password="" type="password" name="login_password" id="login_password" placeholder="Enter password" required />
+                            </div>
+                            <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 mt-3">
+                <div class="card text-center shadow-sm">
+                    <h4 class="display-4">Register</h4>
+                    <p class="lead">Please, provide your email and password</p>
+                    <div class="card-body">
+                        <form name="register" id="register" method="post" action="/signup">
+                            <div class="form-group text-left">
+                                <label for="email">Email address</label>
+                                <input class="form-control" type="email" name="register_email" id="register_email" placeholder="Enter valid email address" required />
+                            </div>
+                            <div class="form-group text-left">
+                                <label for="password">Password</label>
+                                <input class="form-control" type="password" current-password="" name="register_password" id="register_password" placeholder="Enter password" required />
+                            </div>
+                            <div class="form-group text-left">
+                                <label for="password">Confirm password</label>
+                                <input class="form-control" current-password="" type="password" name="register_password_a" id="register_password_a" placeholder="Enter password agian" required />
+                            </div>
+                            <button class="btn btn-success btn-lg btn-block" type="submit" onsubmit="handleRegister">Register</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('footer') %>
